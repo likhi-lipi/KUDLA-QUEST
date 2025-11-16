@@ -52,47 +52,61 @@ header {
 }
 
 
+
 .hero {
   height: 100vh;
-  background: url('https://source.unsplash.com/1600x900/?mangalore,beach,sunset') center/cover no-repeat;
+  background: url('https://imgs.search.brave.com/26E7QRgAz6QZQMebRIIA9jBtpud5xeSGFNqAsGjtYJ8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jb250/ZW50LmpkbWFnaWNi/b3guY29tL2NvbXAv/bWFuZ2Fsb3JlL3Y5/LzA4MjRweDgyNC54/ODI0LjE4MDQxMTA3/NDk1NS5qNHY5L2Nh/dGFsb2d1ZS9sb2Jv/LXMtcml2ZXItdmll/dy1ib2xhci1tYW5n/YWxvcmUtdG91cmlz/dC1hdHRyYWN0aW9u/LXZhYm56ajI5OWEt/MjUwLmpwZz93PTY0/MCZxPTc1') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   text-align: center;
-  color: rgb(235, 235, 235);
-  padding-top: 16px;
-
+  color: white;
+  padding-top: 60px;
 }
 
-.hero-text h1 {
-  font-size: 2.8rem;
-  color: #fff;
-  padding-top: 20px;
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 30, 60, 0.45);
+  backdrop-filter: blur(2px);
 }
 
-.hero-text p {
-  padding-top: 15px;
-  font-size: 1.1rem;
-  color: #e3f2fd;
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-content h1 {
+  font-size: 3.3rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
   background: #ffd60a;
-  color: #001233;
-  padding: 12px 24px;
-  margin-top: 12px;
-  margin-bottom: 25px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  padding: 14px 28px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.btn:hover {
+  background: #ffca3a;
+  transform: translateY(-3px);
 }
 
-.btn:hover {
-  background: #ffc300;
-  transform: translateY(-2px);
-}
 
 
 section.page,
@@ -215,3 +229,43 @@ h2 {
     flex-direction: column;
   }
 }
+
+.section {
+  padding: 80px 40px;
+}
+
+.dest-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.dest-card {
+  width: 300px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.dest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.dest-card h3 {
+  color: #023e8a;
+  margin-bottom: 5px;
+}
+
